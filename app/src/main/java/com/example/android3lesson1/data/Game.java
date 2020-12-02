@@ -1,6 +1,7 @@
 package com.example.android3lesson1.data;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Game<CardContent> {
@@ -12,6 +13,7 @@ public class Game<CardContent> {
             cards.add(new Card<>(false, false, contents.get(i), i * 2));
             cards.add(new Card<>(false, false, contents.get(i), i * 2+1));
         }
+        Collections.shuffle(cards);
     }
 
     public void choose(Card<CardContent> card) {
